@@ -1,0 +1,178 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.title-bar {
+  -webkit-app-region: drag;
+}
+
+.title-bar .controls {
+  -webkit-app-region: no-drag;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html > body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+        Arial, sans-serif; */
+  /* padding: 0; */
+  margin: auto;
+}
+
+html,
+body,
+#root {
+  /* 固定高度为100%而不是100vh或者calc(var(--vh, 1vh) * 100)，可以在解决移动端浏览器地址栏高度计算的前提下避免弹出输入法时卡顿 */
+  height: 100%;
+}
+
+html[data-theme="dark"] {
+  .ToolBar {
+    background-color: var(--workspaice-background-primary);
+  }
+
+  /* // ------------ 滚动条 --------------- */
+
+  /* 设置滚动条的宽度, 背景色与边框 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar:hover {
+    background-color: #222831;
+  }
+  /* 滚动条上的滑块 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+  }
+  /* 滚动条的轨道 */
+  ::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  /* 滚动条上下按钮 */
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  a {
+    color: #f5f5f5;
+  }
+  /* 错误消息中的链接强制成主色 */
+  .message-error-tips a {
+    color: #76abae !important;
+  }
+}
+
+html[data-theme="light"] {
+  .ToolBar {
+    background-color: var(--workspaice-background-primary);
+  }
+
+  /* // ------------ 滚动条 --------------- */
+
+  /* 设置滚动条的宽度, 背景色与边框 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar:hover {
+    background-color: #f5f5f5;
+  }
+  /* 滚动条上的滑块 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6d6d6;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7785;
+  }
+  /* 滚动条的轨道 */
+  ::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  /* 滚动条上下按钮 */
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  a {
+    color: #303841;
+  }
+  /* 错误消息中的链接强制成主色 */
+  .message-error-tips a {
+    color: #76abae !important;
+  }
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+
+  /* 移动端异形屏的显示问题 */
+  padding-top: var(--mobile-safe-area-inset-top, env(safe-area-inset-top, 0px));
+  padding-right: var(--mobile-safe-area-inset-right, env(safe-area-inset-right, 0px));
+  padding-bottom: var(--mobile-safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  padding-left: var(--mobile-safe-area-inset-left, env(safe-area-inset-left, 0px));
+}
+
+/* 当页面包含 disclaimer 时，取消 .App 的底部安全区域 padding，
+   让 disclaimer 沉入安全区域，减少底部留白 */
+.App:has(.disclaimer-safe-area) {
+  padding-bottom: 0;
+}
+
+.ToolBar {
+  /* 移动端异形屏的显示问题 */
+  padding-top: var(--mobile-safe-area-inset-top, env(safe-area-inset-top, 0px));
+  padding-bottom: var(--mobile-safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  padding-left: var(--mobile-safe-area-inset-left, env(safe-area-inset-left, 0px));
+}
+
+.ThreadHistoryDrawer {
+  /* 移动端异形屏的显示问题 */
+  padding-top: var(--mobile-safe-area-inset-top, env(safe-area-inset-top, 0px));
+  padding-right: var(--mobile-safe-area-inset-right, env(safe-area-inset-right, 0px));
+  padding-bottom: var(--mobile-safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  /* padding-left: var(--mobile-safe-area-inset-left, env(safe-area-inset-left, 0px)); */
+}
+
+.Snackbar {
+  /* 移动端异形屏的显示问题 */
+  padding-top: var(--mobile-safe-area-inset-top, env(safe-area-inset-top, 0px));
+  padding-right: var(--mobile-safe-area-inset-right, env(safe-area-inset-right, 0px));
+  padding-bottom: var(--mobile-safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  padding-left: var(--mobile-safe-area-inset-left, env(safe-area-inset-left, 0px));
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("./fonts/Cairo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("./fonts/Cairo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}

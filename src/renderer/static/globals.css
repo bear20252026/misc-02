@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* radius */
+  --workspaice-radius-none: 0rem;
+  --workspaice-radius-xs: 0.125rem;
+  --workspaice-radius-sm: 0.25rem;
+  --workspaice-radius-md: 0.5rem;
+  --workspaice-radius-lg: 1rem;
+  --workspaice-radius-xl: 1.5rem;
+  --workspaice-radius-xxl: 2rem;
+
+  /* spacing */
+  --workspaice-spacing-none: 0rem;
+  --workspaice-spacing-3xs: 0.125rem;
+  --workspaice-spacing-xxs: 0.25rem;
+  --workspaice-spacing-xs: 0.5rem;
+  --workspaice-spacing-sm: 0.75rem;
+  --workspaice-spacing-md: 1rem;
+  --workspaice-spacing-lg: 1.25rem;
+  --workspaice-spacing-xl: 1.5rem;
+  --workspaice-spacing-xxl: 2rem;
+}
+
+:root {
+  /* colors */
+  --workspaice-tint-primary: #303841;
+  --workspaice-tint-secondary: #3a4452;
+  --workspaice-tint-tertiary: #6b7785;
+
+  --workspaice-tint-white: #ffffff;
+  --workspaice-tint-black: #000000;
+  --workspaice-tint-gray: #868e96;
+
+  --workspaice-tint-disabled: #adb5bd;
+  --workspaice-tint-brand: #76abae;
+  --workspaice-tint-accent2: #ff5722;
+  --workspaice-tint-placeholder: #adb5bd;
+  --workspaice-tint-error: #e26d5a;
+  --workspaice-tint-error-disabled: #f0a599;
+  --workspaice-tint-warning: #d99a2b;
+  --workspaice-tint-success: #5fb3a8;
+
+  --workspaice-border-primary: #d6d6d6;
+  --workspaice-border-secondary: #c4c4c4;
+  --workspaice-border-warning: #d99a2b;
+  --workspaice-border-error: #e26d5a;
+  --workspaice-border-success: #5fb3a8;
+  --workspaice-border-brand: #76abae;
+  --workspaice-border-accent2: #ff5722;
+
+  --workspaice-background-primary: #f5f5f5;
+  --workspaice-background-primary-hover: #ececec;
+  --workspaice-background-secondary: #e7e7e7;
+  --workspaice-background-secondary-hover: #dedede;
+  --workspaice-background-tertiary: #d6d6d6;
+  --workspaice-background-tertiary-hover: #c4c4c4;
+  --workspaice-background-disabled: #dcdcdc;
+
+  --workspaice-background-brand-primary: #76abae;
+  --workspaice-background-brand-primary-hover: #62999c;
+  --workspaice-background-brand-secondary: rgb(118, 171, 174, 0.08);
+  --workspaice-background-brand-secondary-hover: rgb(118, 171, 174, 0.16);
+
+  --workspaice-background-accent2-primary: #ff5722;
+  --workspaice-background-accent2-primary-hover: #e64a19;
+  --workspaice-background-accent2-secondary: rgb(255, 87, 34, 0.08);
+  --workspaice-background-accent2-secondary-hover: rgb(255, 87, 34, 0.16);
+
+  --workspaice-background-gray-primary: #868e96;
+  --workspaice-background-gray-primary-hover: #495057;
+  --workspaice-background-gray-secondary: rgb(134, 142, 150, 0.1);
+  --workspaice-background-gray-secondary-hover: rgb(134, 142, 150, 0.12);
+
+  --workspaice-background-success-primary: #5fb3a8;
+  --workspaice-background-success-primary-hover: #4a9c91;
+  --workspaice-background-success-secondary: rgb(95, 179, 168, 0.1);
+  --workspaice-background-success-secondary-hover: rgb(95, 179, 168, 0.12);
+
+  --workspaice-background-error-primary: #e26d5a;
+  --workspaice-background-error-primary-hover: #c95844;
+  --workspaice-background-error-secondary: rgb(226, 109, 90, 0.1);
+  --workspaice-background-error-secondary-hover: rgb(226, 109, 90, 0.12);
+
+  --workspaice-background-warning-primary: #d99a2b;
+  --workspaice-background-warning-primary-hover: #b8801f;
+  --workspaice-background-warning-secondary: rgb(217, 154, 43, 0.1);
+  --workspaice-background-warning-secondary-hover: rgb(217, 154, 43, 0.12);
+
+  --workspaice-background-mask-overlay: rgb(48, 56, 65, 0.64);
+  --workspaice-background-mask-lighten: rgb(245, 245, 245, 0.76);
+}
+
+:root[data-mantine-color-scheme="dark"] {
+  /* colors */
+  --workspaice-tint-primary: #f5f5f5;
+  --workspaice-tint-secondary: #d4d4d4;
+  --workspaice-tint-tertiary: #828282;
+
+  --workspaice-tint-white: #ffffff;
+  --workspaice-tint-black: #000000;
+  --workspaice-tint-gray: #828282;
+
+  --workspaice-tint-disabled: #696969;
+  --workspaice-tint-brand: #76abae;
+  --workspaice-tint-accent2: #ff7043;
+  --workspaice-tint-placeholder: #828282;
+  --workspaice-tint-error: #e26d5a;
+  --workspaice-tint-error-disabled: rgb(226, 109, 90, 0.5);
+  --workspaice-tint-warning: #d99a2b;
+  --workspaice-tint-success: #5fb3a8;
+
+  --workspaice-border-primary: #495057;
+  --workspaice-border-secondary: #3a4452;
+  --workspaice-border-warning: #d99a2b;
+  --workspaice-border-error: #e26d5a;
+  --workspaice-border-success: #5fb3a8;
+  --workspaice-border-brand: #76abae;
+  --workspaice-border-accent2: #ff7043;
+
+  --workspaice-background-primary: #303841;
+  --workspaice-background-primary-hover: #3a4452;
+  --workspaice-background-secondary: #222831;
+  --workspaice-background-secondary-hover: #2e3640;
+  --workspaice-background-tertiary: #404a56;
+  --workspaice-background-tertiary-hover: #4d5764;
+  --workspaice-background-disabled: #2e3640;
+
+  --workspaice-background-brand-primary: #76abae;
+  --workspaice-background-brand-primary-hover: #8fc1c5;
+  --workspaice-background-brand-secondary: rgb(118, 171, 174, 0.2);
+  --workspaice-background-brand-secondary-hover: rgb(143, 193, 197, 0.24);
+
+  --workspaice-background-accent2-primary: #ff7043;
+  --workspaice-background-accent2-primary-hover: #ff8a65;
+  --workspaice-background-accent2-secondary: rgb(255, 112, 67, 0.2);
+  --workspaice-background-accent2-secondary-hover: rgb(255, 138, 101, 0.24);
+
+  --workspaice-background-gray-primary: #343a40;
+  --workspaice-background-gray-primary-hover: #222831;
+  --workspaice-background-gray-secondary: rgb(134, 142, 150, 0.15);
+  --workspaice-background-gray-secondary-hover: rgb(134, 142, 150, 0.2);
+
+  --workspaice-background-success-primary: #5fb3a8;
+  --workspaice-background-success-primary-hover: #7fc8bd;
+  --workspaice-background-success-secondary: rgb(95, 179, 168, 0.15);
+  --workspaice-background-success-secondary-hover: rgb(127, 200, 189, 0.2);
+
+  --workspaice-background-error-primary: #e26d5a;
+  --workspaice-background-error-primary-hover: #ee8773;
+  --workspaice-background-error-secondary: rgb(226, 109, 90, 0.15);
+  --workspaice-background-error-secondary-hover: rgb(238, 135, 115, 0.2);
+
+  --workspaice-background-warning-primary: #d99a2b;
+  --workspaice-background-warning-primary-hover: #e6b04a;
+  --workspaice-background-warning-secondary: rgb(217, 154, 43, 0.15);
+  --workspaice-background-warning-secondary-hover: rgb(230, 176, 74, 0.2);
+
+  --workspaice-background-mask-overlay: rgb(0, 0, 0, 0.78);
+  --workspaice-background-mask-lighten: rgb(245, 245, 245, 0.48);
+}
+
+:root[data-mantine-color-scheme="light"][data-mantine-color-scheme],
+:root[data-mantine-color-scheme="dark"][data-mantine-color-scheme] {
+  /* brand */
+  --mantine-color-workspaice-brand-text: var(--workspaice-tint-brand);
+  --mantine-color-workspaice-brand-filled: var(--workspaice-background-brand-primary);
+  --mantine-color-workspaice-brand-filled-hover: var(--workspaice-background-brand-primary-hover);
+  --mantine-color-workspaice-brand-light: var(--workspaice-background-brand-secondary);
+  --mantine-color-workspaice-brand-light-hover: var(--workspaice-background-brand-secondary-hover);
+  --mantine-color-workspaice-brand-light-color: var(--workspaice-tint-brand);
+  --mantine-color-workspaice-brand-outline: var(--workspaice-border-brand);
+  --mantine-color-workspaice-brand-outline-hover: color-mix(in srgb, var(--workspaice-border-brand), transparent 95%);
+
+  /* accent2 */
+  --mantine-color-workspaice-accent2-text: var(--workspaice-tint-accent2);
+  --mantine-color-workspaice-accent2-filled: var(--workspaice-background-accent2-primary);
+  --mantine-color-workspaice-accent2-filled-hover: var(--workspaice-background-accent2-primary-hover);
+  --mantine-color-workspaice-accent2-light: var(--workspaice-background-accent2-secondary);
+  --mantine-color-workspaice-accent2-light-hover: var(--workspaice-background-accent2-secondary-hover);
+  --mantine-color-workspaice-accent2-light-color: var(--workspaice-tint-accent2);
+  --mantine-color-workspaice-accent2-outline: var(--workspaice-border-accent2);
+  --mantine-color-workspaice-accent2-outline-hover: color-mix(
+    in srgb,
+    var(--workspaice-border-accent2),
+    transparent 95%
+  );
+
+  /* success */
+  --mantine-color-workspaice-success-text: var(--workspaice-tint-success);
+  --mantine-color-workspaice-success-filled: var(--workspaice-background-success-primary);
+  --mantine-color-workspaice-success-filled-hover: var(--workspaice-background-success-primary-hover);
+  --mantine-color-workspaice-success-light: var(--workspaice-background-success-secondary);
+  --mantine-color-workspaice-success-light-hover: var(--workspaice-background-success-secondary-hover);
+  --mantine-color-workspaice-success-light-color: var(--workspaice-tint-success);
+  --mantine-color-workspaice-success-outline: var(--workspaice-border-success);
+  --mantine-color-workspaice-success-outline-hover: color-mix(
+    in srgb,
+    var(--workspaice-border-success),
+    transparent 95%
+  );
+
+  /* error */
+  --mantine-color-workspaice-error-text: var(--workspaice-tint-error);
+  --mantine-color-workspaice-error-filled: var(--workspaice-background-error-primary);
+  --mantine-color-workspaice-error-filled-hover: var(--workspaice-background-error-primary-hover);
+  --mantine-color-workspaice-error-light: var(--workspaice-background-error-secondary);
+  --mantine-color-workspaice-error-light-hover: var(--workspaice-background-error-secondary-hover);
+  --mantine-color-workspaice-error-light-color: var(--workspaice-tint-error);
+  --mantine-color-workspaice-error-outline: var(--workspaice-border-error);
+  --mantine-color-workspaice-error-outline-hover: color-mix(in srgb, var(--workspaice-border-error), transparent 95%);
+
+  /* warning */
+  --mantine-color-workspaice-warning-text: var(--workspaice-tint-warning);
+  --mantine-color-workspaice-warning-filled: var(--workspaice-background-warning-primary);
+  --mantine-color-workspaice-warning-filled-hover: var(--workspaice-background-warning-primary-hover);
+  --mantine-color-workspaice-warning-light: var(--workspaice-background-warning-secondary);
+  --mantine-color-workspaice-warning-light-hover: var(--workspaice-background-warning-secondary-hover);
+  --mantine-color-workspaice-warning-light-color: var(--workspaice-tint-warning);
+  --mantine-color-workspaice-warning-outline: var(--workspaice-border-warning);
+  --mantine-color-workspaice-warning-outline-hover: color-mix(
+    in srgb,
+    var(--workspaice-border-warning),
+    transparent 95%
+  );
+
+  /* warning */
+  --mantine-color-workspaice-gray-text: var(--workspaice-tint-gray);
+  --mantine-color-workspaice-gray-filled: var(--workspaice-background-gray-primary);
+  --mantine-color-workspaice-gray-filled-hover: var(--workspaice-background-gray-primary-hover);
+  --mantine-color-workspaice-gray-light: var(--workspaice-background-gray-secondary);
+  --mantine-color-workspaice-gray-light-hover: var(--workspaice-background-gray-secondary-hover);
+  --mantine-color-workspaice-gray-light-color: var(--workspaice-tint-gray);
+  --mantine-color-workspaice-gray-outline: var(--workspaice-tint-gray);
+  --mantine-color-workspaice-gray-outline-hover: color-mix(in srgb, var(--workspaice-tint-gray), transparent 95%);
+
+  --mantine-color-workspaice-primary-text: var(--workspaice-tint-primary);
+  --mantine-color-workspaice-primary-filled: var(--workspaice-background-primary);
+  --mantine-color-workspaice-primary-filled-hover: var(--workspaice-background-primary-hover);
+  --mantine-color-workspaice-primary-light: var(--workspaice-background-secondary);
+  --mantine-color-workspaice-primary-light-hover: var(--workspaice-background-secondary-hover);
+  --mantine-color-workspaice-primary-light-color: var(--workspaice-tint-primary);
+  --mantine-color-workspaice-primary-outline: var(--workspaice-border-primary);
+  --mantine-color-workspaice-primary-outline-hover: color-mix(
+    in srgb,
+    var(--workspaice-border-primary),
+    transparent 95%
+  );
+}
+
+.mantine-Spotlight-actionsGroup {
+  margin-bottom: 2rem;
+}
+
+.mantine-Spotlight-actionDescription {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* KaTeX styles for preventing overflow */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5rem;
+}
+
+.katex-display > .katex {
+  /* width: auto; */
+  /* max-width: 100%; */
+  display: inline-block;
+}
+
+/* Hide scrollbar for inline math */
+.katex:not(.katex-display) {
+  /* max-width: 100%; */
+  overflow: hidden;
+}
+
+/* Style scrollbar for displayed math equations */
+.katex-display::-webkit-scrollbar {
+  height: 6px;
+}
+
+.katex-display::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.katex-display::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.katex-display:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode scrollbar */
+[data-mantine-color-scheme="dark"] .katex-display::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+[data-mantine-color-scheme="dark"] .katex-display:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.copilot-picker-scroll-area .mantine-ScrollArea-scrollbar {
+  padding-left: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-md);
+}
+
+.pswp__top-bar {
+  margin-top: var(--mobile-safe-area-inset-top);
+  -webkit-app-region: no-drag;
+}
+html[data-need-room-for-mac-controls="true"] .pswp__counter {
+  padding-top: 1rem;
+}
+html[data-need-room-for-windows-controls="true"] .pswp__top-bar {
+  padding-right: 9rem;
+}
+.pswp {
+  pointer-events: auto;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+div[data-vaul-handle] {
+  margin: 12px auto;
+  width: 64px;
+  height: 4px;
+  background-color: var(--workspaice-tint-tertiary);
+  border-radius: 2px;
+  cursor: grab;
+  user-select: none;
+  opacity: 0.5;
+}
+div[data-vaul-overlay] {
+  z-index: 2000;
+}
+div[data-vaul-drawer] {
+  z-index: 2000;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="%VIEWPORT_CONTENT%"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="workspaice" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="workspaice" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <title>WorkspAIce</title>
+    <script>
+      var initialTheme = localStorage.getItem("initial-theme");
+      if (initialTheme === "light" || initialTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", initialTheme);
+        document.documentElement.setAttribute(
+          "data-mantine-color-scheme",
+          initialTheme
+        );
+      }
+    </script>
+    <style>
+      html[data-theme="dark"] {
+        background-color: #242424;
+      }
+
+      .splash-screen {
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        background-color: #fff;
+        overflow: hidden;
+      }
+      html[data-theme="dark"] .splash-screen {
+        background-color: #242424;
+      }
+
+      .splash-screen-top {
+        flex: 2;
+      }
+      .splash-screen-bottom {
+        flex: 3;
+        width: 100%;
+        position: relative;
+      }
+      .splash-screen-content {
+        flex: 0 0 auto;
+        position: relative;
+      }
+
+      .splash-screen-logo {
+        display: block;
+        color: #495057;
+      }
+      html[data-theme="dark"] .splash-screen-logo {
+        color: #ced4da;
+      }
+
+      .splash-screen-logo-bg {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #dee2e6;
+      }
+      html[data-theme="dark"] .splash-screen-logo-bg {
+        color: #495057;
+      }
+
+      .splash-screen-fade-out {
+        animation: fade-out 0.5s ease-in-out forwards;
+      }
+
+      @keyframes fade-out {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div class="splash-screen">
+      <div class="splash-screen-top"></div>
+      <div class="splash-screen-content">
+        <svg
+          class="splash-screen-logo"
+          width="180"
+          height="180"
+          viewBox="0 0 256 256"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="8" y="8" width="240" height="240" rx="48" fill="currentColor" opacity="0.08"/>
+          <path d="M60 88 L88 200 L120 136 L136 168 L152 136 L168 200 L196 88" stroke="currentColor" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M88 88 L168 88" stroke="#76ABAE" stroke-width="22" stroke-linecap="round" fill="none"/>
+          <rect x="148" y="148" width="56" height="56" rx="13" fill="#FF5722"/>
+          <text x="176" y="190" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="700" fill="#F5F5F5" text-anchor="middle">AI</text>
+        </svg>
+
+        <svg
+          class="splash-screen-logo-bg"
+          width="660"
+          height="660"
+          viewBox="0 0 660 660"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            opacity="0.18"
+            cx="330"
+            cy="330"
+            r="280"
+            stroke="currentColor"
+            stroke-width="0.6"
+          />
+          <circle
+            opacity="0.12"
+            cx="330"
+            cy="330"
+            r="220"
+            stroke="currentColor"
+            stroke-width="0.6"
+          />
+        </svg>
+      </div>
+      <div class="splash-screen-bottom" id="log-root"></div>
+    </div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
